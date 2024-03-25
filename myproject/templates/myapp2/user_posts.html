@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+    <h2>Посты автора {{ author }}</h2>
+    {% for post in posts %}
+        {% if not post.is_published %}
+            <p><a href="{% url 'post' post.id %}">{{ post.title }}</a></p>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

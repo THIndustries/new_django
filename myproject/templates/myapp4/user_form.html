@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+    <h3>{{ message }}</h3>
+    <form action="" method="post"> <!-- -->
+        {% csrf_token %} <!-- Тэг - токен, секретный ключ, защита от CSRF атак -->
+        {{ form.as_div }} <!-- вывод формы -->
+        <input type="submit" value="Отправить"> <!-- кнока отправить и ещё тип -->
+    </form>
+
+{% endblock %}

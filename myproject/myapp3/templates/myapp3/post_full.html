@@ -1,0 +1,8 @@
+{% extends 'base.html' %} <!-- наследуемся от базы на уровне проекта, а не приложения -->
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.content }}</p>
+{% endblock %}

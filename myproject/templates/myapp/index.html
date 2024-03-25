@@ -1,0 +1,9 @@
+{% extends 'base_myapp.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+    <h1>This is the main page of my django project</h1>
+    <a href="{% url 'about_myapp' %}">About us</a>
+    <p>{{ text }}</p>
+{% endblock %}
