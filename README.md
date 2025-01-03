@@ -1,1 +1,1 @@
-new_django
+new_django repo
